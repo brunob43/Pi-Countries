@@ -1,0 +1,106 @@
+
+
+body{
+    background: url("../../assets/photo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+.fondo{
+    background-color:white;
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+    height:max-content;
+    border: #596e79;
+    
+}
+
+
+.text{
+    color: #40403e;
+    width: 25%;
+    margin-top: 15%;
+    background-color: rgba(255, 255, 255, 0.074);
+    margin-left: 34.5%;
+    padding: 15px;
+    border-radius: 40px;
+    backdrop-filter: blur(1px);
+   /* background: linear-gradient(145deg, #f0f0f0, #cacaca);*/
+    box-shadow: 20px 20px 60px #8b8b8b, -20px -20px 60px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.071);
+
+
+   /* background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);*/
+
+     
+        /*color: #ffffff;
+        background-color: #E5EDF5;
+        box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+        box-shadow: none;*/
+       
+}
+.titulo{
+    font-size: 60px;
+    font-weight: lighter;
+    /*font-family: sans-serif;*/
+}
+/*
+.button {
+    background-color:#999898 ;
+    color:  #f0ece2;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }*/
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #708299;
+    background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+   }
+   
+   button:hover {
+    color: #4b545f;
+    background-color: #E5EDF5;
+    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+   }
+   
+   button:active {
+    box-shadow: none;
+   }
+
+ 

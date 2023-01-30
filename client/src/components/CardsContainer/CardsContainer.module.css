@@ -1,0 +1,13 @@
+.cardsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 1200px; */
+    gap: 1em;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    /* justify-content: space-between; */
+    /* width: 20px; */
+    
+}
