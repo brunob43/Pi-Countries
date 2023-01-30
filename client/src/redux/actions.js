@@ -12,8 +12,23 @@ export const ORDER_POPULATION = "ORDER_POPULATION"
 
 
 export const getCountries = () => {
-  return function (dispatch) {
-    fetch("http://localhost:3001/countries")
+  return async function (dispatch) {
+    try {
+      const json = await axios.get("/countries");
+      return dispatch({
+        type: GET_COUNTRIES,
+        payload: json.data,
+      });
+
+    } catch (error) {
+      return dispatch({
+        type: Error,
+        payload: "No se hay cargado los paises",
+      })
+    }
+    };
+  }
+    /*fetch("/countries")
       .then(response => { return response.json() })
       .then(data => {
         dispatch({
@@ -22,7 +37,7 @@ export const getCountries = () => {
         });
       }).catch((err) => console.log(err));
   };
-};
+};*/
 
 export const cleanCountries = () => {
   return ({
@@ -38,8 +53,27 @@ export const filterCountriesByContinent = (payload) => {
 }
 
 export const getCountriesByName = (name) => {
+  return async (dispatch) => {
+    try { 
+      const json = await axios.get(
+        `/countries/?name=${name}`
+        );
+        return dispatch({
+          type: GET_NAME_COUNTRIE,
+          payload: json.data,
+        });
+        } catch(error) {
+        return dispatch({
+          type: error,
+          payload: "No existe pais con ese nombre",
+        });
+      }
+  };
+};
+
+/*export const getCountriesByName = (name) => {
   return function (dispatch) {
-    fetch("http://localhost:3001/countries/?name=" + name)
+    fetch("/countries/?name=" + name)
       .then(response => { return response.json() })
       .then(data => {
         dispatch({
@@ -48,7 +82,7 @@ export const getCountriesByName = (name) => {
         });
       }).catch((err) => console.log(err));
   };
-}
+}*/
 
 export function orderByName(payload){
   return {
@@ -74,7 +108,7 @@ export const setCountries = (value) => {
 
 export function postActivity(payload) {
   return async function () {
-    const response = await axios.post("http://localhost:3001/activities", payload)
+    const response = await axios.post("/activities", payload)
     return response;
   }
 }
@@ -82,7 +116,7 @@ export function postActivity(payload) {
 export function getDetail(id) {
   return async function (dispatch) {
     try {
-      var json = await axios.get("http://localhost:3001/countries/" + id);
+      var json = await axios.get("/countries/" + id);
       return dispatch({
         type: GET_DETAIL,
         payload: json.data
