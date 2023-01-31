@@ -28,6 +28,6 @@ const { PORT } = process.env;
 conn.sync({ force: true }).then(() => {
   crearPaisesEnDb();
   server.listen(PORT, () => {
-    console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
+    console.log('%s listening at', PORT); // eslint-disable-line no-console
   });
 });
